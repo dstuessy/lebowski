@@ -1,0 +1,15 @@
+{
+  "name": "lebowski",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/lebowski/main.ts",
+  "scripts": {
+    "start": "tsc --watch src/* --sourcemap true --outFile sandbox/script/lebowski.js src/lebowski.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Stuessy",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}
