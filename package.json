@@ -4,12 +4,14 @@
   "description": "",
   "main": "src/lebowski/main.ts",
   "scripts": {
-    "start": "tsc --watch src/* --sourcemap true --outFile sandbox/script/lebowski.js src/lebowski.ts",
+    "start": "tsc -p . --watch",
+    "start-broke": "tsc --watch src/* --sourcemap true --outFile sandbox/script/lebowski.js src/lebowski.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Stuessy",
-  "license": "ISC",
+  "license": "see LICENSE",
   "devDependencies": {
+    "reflect-metadata": "^0.1.12",
     "typescript": "^2.9.2"
   }
 }

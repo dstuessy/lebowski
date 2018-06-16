@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "outFile": "sandbox/script/lebowski.js",
+    "lib": ["dom", "es5", "scripthost", "es6"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
