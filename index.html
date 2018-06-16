@@ -6,14 +6,29 @@
 </head>
 <body>
 
-    <form data-component="form" action="#stuff" method="get">
-        <input type="text" name="firstname" placeholder="firstname">
-        <input type="text" name="surname" placeholder="surname">
-        <input type="number" name="age" placeholder="age">
+    <form action="#stuff" method="get" data-component="form" data-submit="onSubmit">
+        <input type="text" name="firstname" placeholder="firstname" data-var="firstname" value="">
+        <input type="text" name="surname" placeholder="surname" data-var="surname" value="">
+        <input type="number" name="age" placeholder="age" data-var="age" value="">
+
+        <p>
+            <span data-text="firstname"></span>
+            <span data-text="surname"></span>
+            <span data-text="age"></span>
+        </p>
 
         <button type="submit">Submit</button>
     </form>
 
     <script src="script/lebowski.js"></script>
+    <script>
+        var FormComponent = Lebowski.Component(document.querySelector('[data-component="form"]'), {
+            onSubmit(e) {
+                e.preventDefault();
+            }
+        });
+
+        console.log(FormComponent);
+    </script>
 </body>
 </html>
