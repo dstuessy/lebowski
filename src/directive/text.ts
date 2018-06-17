@@ -7,6 +7,8 @@ namespace Lebowski.Directive {
         }
 
         evaluate(scope: Scope) {
+            this.el.innerHTML = scope[this.expr];
+
             scope.watch<string>(this.expr, (newVal: string) => {
                 this.el.innerHTML = newVal;
             });

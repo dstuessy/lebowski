@@ -9,9 +9,10 @@ namespace Lebowski.Directive {
         }
 
         evaluate(scope: Scope) {
+            scope.set(this.el.name, this.el.value);
+
             this.el.addEventListener('change', (e: Event) => {
-                const name = this.el.name;
-                scope.set(name, this.el.value);
+                scope.set(this.el.name, this.el.value);
             });
         }
     }
