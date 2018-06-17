@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Lebowski</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+        .form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 
-    <form action="#stuff" method="get" data-component="form" data-submit="onSubmit">
-        <input type="text" name="firstname" placeholder="firstname" data-var="firstname" value="">
-        <input type="text" name="surname" placeholder="surname" data-var="surname" value="">
-        <input type="number" name="age" placeholder="age" data-var="age" value="">
+    <form class="form" action="#stuff" method="get" data-component="form" data-submit="onSubmit">
+        <h1>Personal Identification</h1>
 
-        <p>
-            <span data-text="firstname"></span>
-            <span data-text="surname"></span>
-            <span data-text="age"></span>
-        </p>
+        <p>Please identify yourself below.</p>
+
+        <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input class="form-control" type="text" name="firstname" placeholder="firstname" data-var="firstname" value="Default First">
+            <label for="surname">Surname</label>
+            <input class="form-control" type="text" name="surname" placeholder="surname" data-var="surname" value="Default Sur">
+            <label for="age">Age</label>
+            <input class="form-control" type="number" name="age" placeholder="age" data-var="age" value="0">
+        </div>
+
+        <div class="preview">
+            <p>Firstname: <span data-text="firstname"></span></p>
+            <p>Surname: <span data-text="surname"></span></p>
+            <p>Age: <span data-text="age"></span></p>
+        </div>
 
         <button type="submit">Submit</button>
     </form>
@@ -24,6 +41,8 @@
     <script>
         var FormComponent = Lebowski.Component(document.querySelector('[data-component="form"]'), {
             onSubmit(e) {
+                console.log('submit', this);
+                alert('thanks!');
                 e.preventDefault();
             }
         });
