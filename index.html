@@ -47,8 +47,8 @@
     <script>
         Lebowski.Component('.form', {
             onSubmit(e) {
-                console.log('submit', this);
-                alert('thanks!');
+                console.log(this);
+                alert('thanks!' + '\n' + JSON.stringify(this));
                 e.preventDefault();
             }
         });
