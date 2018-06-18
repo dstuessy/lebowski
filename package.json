@@ -6,6 +6,7 @@
   "scripts": {
     "start": "tsc -p . --watch",
     "start-broke": "tsc --watch src/* --sourcemap true --outFile sandbox/script/lebowski.js src/lebowski.ts",
+    "deploy-sandbox": "git subtree push --prefix sandbox origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Stuessy",
