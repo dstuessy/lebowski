@@ -5,14 +5,12 @@
   "main": "src/lebowski/main.ts",
   "scripts": {
     "start": "tsc -p . --watch",
-    "start-broke": "tsc --watch src/* --sourcemap true --outFile sandbox/script/lebowski.js src/lebowski.ts",
     "deploy-sandbox": "git subtree push --prefix sandbox origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Stuessy",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "reflect-metadata": "^0.1.12",
     "typescript": "^2.9.2"
   }
 }
