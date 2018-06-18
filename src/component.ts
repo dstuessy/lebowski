@@ -30,7 +30,8 @@ namespace Lebowski {
         }
     }
 
-    export const Component = function (el: Element, scope: ScopeProps): ComponentClass {
-        return new ComponentClass(el, scope);
+    export const Component = function (selector: string, scope: ScopeProps) {
+        const els = document.querySelectorAll(selector);
+        Array.from(els).forEach((el: Element) => new ComponentClass(el, scope));
     }
 }

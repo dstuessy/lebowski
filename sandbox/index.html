@@ -45,15 +45,13 @@
 
     <script src="script/lebowski.js"></script>
     <script>
-        var FormComponent = Lebowski.Component(document.querySelector('.form'), {
+        Lebowski.Component('.form', {
             onSubmit(e) {
                 console.log('submit', this);
                 alert('thanks!');
                 e.preventDefault();
             }
         });
-
-        console.log(FormComponent);
     </script>
 </body>
 </html>
