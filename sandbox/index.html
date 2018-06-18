@@ -14,19 +14,19 @@
 </head>
 <body>
 
-    <form class="form" action="#stuff" method="get" data-component="form" data-submit="onSubmit">
+    <form class="form" action="#stuff" method="get" data-submit="onSubmit">
         <h1>Personal Identification</h1>
 
         <p>Please identify yourself below.</p>
 
         <div class="form-group">
             <label for="firstname">Firstname</label>
-            <input class="form-control" type="text" name="firstname" placeholder="firstname" data-var="firstname" value="Default First">
+            <input class="form-control" type="text" name="firstname" placeholder="firstname" data-var="firstname" value="">
         </div>
 
         <div class="form-group">
             <label for="surname">Surname</label>
-            <input class="form-control" type="text" name="surname" placeholder="surname" data-var="surname" value="Default Sur">
+            <input class="form-control" type="text" name="surname" placeholder="surname" data-var="surname" value="">
         </div>
 
         <div class="form-group">
@@ -34,18 +34,18 @@
             <input class="form-control" type="number" name="age" placeholder="age" data-var="age" value="0">
         </div>
 
-        <div class="preview">
+        <div class="form-preview">
             <p>Firstname: <span data-text="firstname"></span></p>
             <p>Surname: <span data-text="surname"></span></p>
             <p>Age: <span data-text="age"></span></p>
         </div>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="form-submit btn btn-primary" type="submit">Submit</button>
     </form>
 
     <script src="script/lebowski.js"></script>
     <script>
-        var FormComponent = Lebowski.Component(document.querySelector('[data-component="form"]'), {
+        var FormComponent = Lebowski.Component(document.querySelector('.form'), {
             onSubmit(e) {
                 console.log('submit', this);
                 alert('thanks!');
