@@ -62,6 +62,3 @@ typings/
 
 # vscode stuff
 .vscode/**
-
-# sandbox stuff
-sandbox/script/**
